@@ -1,6 +1,6 @@
 
 services:
-  web:
+  app:
     image: express-docker:01 
     container_name: express-docker-container
     build: 
@@ -9,5 +9,5 @@ services:
     ports:
       - "4000:4000"  
     volumes:
-      - .:/app  # Optional: Mount your current directory to the /app directory in the container
-    restart: always  # Automatically restart the container if it stops
+      - .:/app 
+      - /app/node_modules  

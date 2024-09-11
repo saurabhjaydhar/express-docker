@@ -1,5 +1,5 @@
 # Use the official Node.js image as a base image
-FROM node:20
+FROM node:16
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 4000
 
 # Command to run the application
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
